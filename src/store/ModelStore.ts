@@ -391,6 +391,7 @@ class ModelStore {
       n_parallel: this.contextInitParams.n_parallel ?? 1, // NEW (1 for blocking mode only)
       use_mlock: this.contextInitParams.use_mlock,
       use_mmap: effectiveUseMmap,
+      ctx_shift: true, // Enable context shifting to handle prompts larger than context size
     };
 
     // Remove undefined values from the params object
